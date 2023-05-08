@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "502795472870",
+    "project_id": "prakriti-3b9e7",
+    "storage_bucket": "prakriti-3b9e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502795472870:android:26741b7bdd2be86cb21027",
+        "android_client_info": {
+          "package_name": "com.thakursa.prakriti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502795472870-te9em3frv509uq3fd49t28jkurodaep1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKCyxApJqrRqWV8QXFfd4USmQWabbaErE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502795472870-te9em3frv509uq3fd49t28jkurodaep1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
