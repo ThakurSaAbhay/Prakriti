@@ -1,14 +1,15 @@
 package com.thakursa.prakriti
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.thakursa.prakriti.R.id.toolbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var toolbar:Toolbar
@@ -33,7 +34,17 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        val img_stepcounter=findViewById<ImageView>(R.id.imgstepcounter)
+        img_stepcounter.setOnClickListener {
+            Toast.makeText(this,"hahahaha",Toast.LENGTH_SHORT).show()
+            var intent=Intent(this, stepmain::class.java)
+            startActivity(intent)
+        }
     }
+
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
