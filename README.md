@@ -1,5 +1,5 @@
 # Prakriti is an innovative software application that empowers residents to adopt eco-friendly lifestyles through personalized recommendations, actionable insights, and gamification, while also providing real-time alerts and information on local environmental conditions and sustainability initiatives. The application will enable residents to reduce their carbon footprint and contribute to the creation of sustainable and livable smart cities.
-has multiple games will which use camera as the source of input from the user and AI to detect what the user is doing. For example: We will be creating a game which will give points to the user on litter picking 
+It has multiple games will which use camera as the source of input from the user and AI to detect what the user is doing. For example: We will be creating a game which will give points to the user on litter picking 
 if the user will pick up the litter and throw it in the dust bin, he/she will be rewarded with 10 credits. We will be having many such games as using public transport
 (It will have metro website integrated with it), watering plants(it will have plant purchase integrated with it) etc.
 We will be integrating a streak system with the app so that the users will get engaged to it. We will be introducing events in the app on highly polluted days(High AQI) that will help lowering the pollution fast.
