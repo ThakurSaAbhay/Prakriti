@@ -244,7 +244,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="1dp"
                                     android:text="Pressure"
-                                    android:textColor="@color/white">
+                                    android:textColor="@color/white"
+                                    android:tint="@color/white">
 
                                 </TextView>
 
@@ -310,7 +311,10 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_margin="2dp"
-                                    android:src="@drawable/wind">
+                                    android:src="@drawable/wind"
+                                    android:backgroundTint="@color/white"
+                                    android:tint="@color/white"
+                                    tools:ignore="UseAppTint">
 
 
                                 </ImageView>

@@ -3,6 +3,7 @@ package com.thakursa.prakriti
 import android.Manifest
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationManager
@@ -44,9 +45,16 @@ class WeatherActivity : AppCompatActivity() {
     private lateinit var fusedLocationProvider: FusedLocationProviderClient
     private val LOCATION_REQUEST_CODE=101
     private val apiKey="1894e1f7a87cfa82c7799cc285bffa8a"
-
+    public var count=0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        count=count+1
+        val sharedPreferences: SharedPreferences =this.getSharedPreferences("steps",0)
+        val editor: SharedPreferences.Editor=sharedPreferences.edit()
+        editor.putInt("count",count)
+        editor.apply()
+        editor.commit()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
 

@@ -93,6 +93,8 @@
         android:layout_height="30dp"
         android:id="@+id/signin"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:hint="Not registered yet? Sign Up"
         />
     <TextView

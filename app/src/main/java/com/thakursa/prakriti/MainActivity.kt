@@ -1,13 +1,16 @@
 package com.thakursa.prakriti
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         toolbar = findViewById(R.id.toolbar)
+        var txtp=findViewById<TextView>(R.id.txtpoints)
         drawerLayout = findViewById(R.id.drawerLayout)
         navigationView = findViewById(R.id.navigationview)
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -48,9 +52,24 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        val wpref= getSharedPreferences("count", 0)
+        val wstr = wpref.getInt("count", 1)
+        Toast.makeText(this,wstr.toString(),Toast.LENGTH_SHORT).show()
+        if (wstr != null ) {
+            txtp.text=(Integer.parseInt(txtp.text.toString())+wstr).toString()
+        }
+
+
+        val mpref = getSharedPreferences("steps", 0)
+        val str = mpref.getInt("steps", 0)
+        Toast.makeText(this,str.toString()+" "+wstr.toString(),Toast.LENGTH_SHORT).show()
+        if (str != null && wstr != null) {
+            txtp.text=((str/10)+wstr).toString()
+        }
+
+
         val img_stepcounter=findViewById<ImageView>(R.id.imgstepcounter)
         img_stepcounter.setOnClickListener {
-            Toast.makeText(this,"hahahaha",Toast.LENGTH_SHORT).show()
             var intent=Intent(this, stepmain::class.java)
             startActivity(intent)
         }
