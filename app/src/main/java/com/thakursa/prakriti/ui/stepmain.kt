@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.thakursa.prakriti.callback.stepsCallback
+import com.thakursa.prakriti.databinding.StepBinding
 import com.thakursa.prakriti.helper.GeneralHelper
 import com.thakursa.prakriti.service.StepDetectorService
-import kotlinx.android.synthetic.main.step.TV_CALORIES
-import kotlinx.android.synthetic.main.step.TV_DISTANCE
-import kotlinx.android.synthetic.main.step.TV_STEPS
 
 class stepmain : AppCompatActivity(), stepsCallback {
+    private lateinit var binding: StepBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.step)
+        binding = StepBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val intent = Intent(this, StepDetectorService::class.java)
         startService(intent)
@@ -22,8 +23,8 @@ class stepmain : AppCompatActivity(), stepsCallback {
     }
 
     override fun subscribeSteps(steps: Int) {
-        TV_STEPS.setText(steps.toString())
-        TV_CALORIES.setText(GeneralHelper.getCalories(steps))
-        TV_DISTANCE.setText(GeneralHelper.getDistanceCovered(steps))
+        binding.TVSTEPS.text = steps.toString()
+        binding.TVCALORIES.text = GeneralHelper.getCalories(steps)
+        binding.TVDISTANCE.text = GeneralHelper.getDistanceCovered(steps)
     }
 }
